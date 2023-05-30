@@ -113,3 +113,38 @@ function showHomelife(){
 
 window.addEventListener('scroll', showHomelife);
 
+
+
+var stickyDiv = document.getElementById('img-hobbies');
+var stickyPosition = 4800; // Adjust the scroll position where the div becomes sticky
+var unstickyPosition = 5200; // Adjust the scroll position where the div becomes unsticky
+
+function updateStickyDiv() {
+  var scrollPosition = window.scrollY;
+  
+  if (scrollPosition >= stickyPosition && scrollPosition < unstickyPosition) {
+    stickyDiv.classList.add('sticky');
+  } else {
+    stickyDiv.classList.remove('sticky');
+  }
+}
+
+window.addEventListener('scroll', updateStickyDiv);
+
+
+var stickyDiv1 = document.getElementById('img-extra');
+var stickyPosition1 = 3290; // Adjust the scroll position where the div becomes sticky
+var unstickyPosition1 = 3750; // Adjust the scroll position where the div becomes unsticky
+
+function updateStickyDiv1() {
+    var scrollPosition = window.scrollY;
+    
+    if (scrollPosition >= stickyPosition1 ) {
+      stickyDiv1.classList.add('sticky');
+    } else {
+      stickyDiv1.classList.remove('sticky');
+    }
+  }
+  
+  window.addEventListener('scroll', updateStickyDiv1);
+  
