@@ -1,0 +1,342 @@
+body {
+  margin: 20px;
+  background-color: #5c99ff;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Mario";
+  src: url("assets/fonts/SuperMarioGalaxy.eot"); /* IE9 Compat Modes */
+  src: url("assets/fonts/SuperMarioGalaxy.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("assets/fonts/SuperMarioGalaxy.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("assets/fonts/SuperMarioGalaxy.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("assets/fonts/SuperMarioGalaxy.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("assets/fonts/SuperMarioGalaxy.svg#svgFontName") format("svg"); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Retro";
+  src: url("assets/fonts/RetroGaming.eot"); /* IE9 Compat Modes */
+  src: url("assets/fonts/RetroGaming.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("assets/fonts/RetroGaming.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("assets/fonts/RetroGaming.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("assets/fonts/RetroGaming.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("assets/fonts/RetroGaming.svg#svgFontName")
+      format("svg"); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.cloud1 {
+  background: url("assets/images/cloud1.png");
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 450px;
+  background-repeat: no-repeat;
+  animation: move1 90s infinite;
+  opacity: 0.4;
+  scale: 0.5;
+}
+
+.cloud2 {
+  background: url("assets/images/cloud4.png");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 300px;
+  background-repeat: no-repeat;
+  animation: move2 50s infinite;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.cloud3 {
+  background: url("assets/images/cloud3.png");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50px;
+  background-repeat: no-repeat;
+  animation: move3 60s infinite;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+h1 {
+  font-family: Mario, Arial, Helvetica, sans-serif;
+  color: white;
+  /* add text border */
+  -webkit-text-stroke: 1px black;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+
+  font-size: 70px;
+  text-align: center;
+  /* increase letter spacing */
+  letter-spacing: 2px;
+}
+
+#syd-grad {
+  width: 20%;
+  height: auto;
+  margin-top: 5vh;
+  margin-left: 10vw;
+  border-radius: 28px;
+  border: #5e2207 solid 5pt;
+}
+
+#main {
+  display: flex;
+  /* vertical center items */
+  align-items: center;
+  justify-content: center;
+}
+
+#main p {
+  color: rgb(34, 32, 32);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  background-color: #fc9d4f;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 15pt;
+  width: 30%;
+  border-radius: 28px;
+  border: #5c2319 solid 5pt;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(98, 114, 255);
+  top: 0;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity 0.3s;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#homer {
+  margin-bottom: 0;
+  font-size: 2em;
+  font-family: Mario;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  /* add border for each letter */
+  -webkit-text-stroke: 1pt black;
+  /* add shadow */
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+  text-decoration: none;
+}
+
+#homer:hover {
+  text-decoration: none;
+  /* add white glow */
+  text-shadow: 0 0 50px #fff;
+  transition: 0.2s;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  font-family: Retro;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: rgb(85, 230, 85);
+  transition: 0.3s all;
+  text-decoration: none;
+}
+
+.show {
+  opacity: 1;
+}
+
+@keyframes move1 {
+  0% {
+    margin-left: -1000px;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    margin-left: -900px;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+@keyframes move3 {
+  0% {
+    margin-left: -800px;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+.start-container {
+  /* center a div */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+}
+
+/* make font pixel */
+.start {
+  background-color: rgb(78, 150, 78);
+  color: white;
+  font-size: large;
+  padding: 20px 50px 20px 50px;
+  border-radius: 8px;
+  text-align: center;
+  border: #000000 solid 5pt;
+  font-family: Retro;
+}
+
+/* .column {
+  margin-left: 15vw;
+} */
+
+.row {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  /* vertically align items */
+  align-items: center;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.row h3 {
+  font-family: Retro;
+  color: white;
+  font-size: 3rem;
+  /* add border */
+}
+
+.images {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.images img {
+  border-radius: 28px;
+  transition: transform 0.3s ease;
+  border: #5e2207 solid 5pt;
+  width: 33%;
+}
+
+.images img:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+  z-index: -2;
+}
+
+.images.show {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.content {
+  transform: scale(0.9);
+}
+/* 
+.image {
+  display: flex;
+} */
+
+.row p {
+  color: rgb(34, 32, 32);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  text-align: left;
+  padding: 15pt;
+  background-color: #fc9d4f;
+  border-radius: 28px;
+  border: #5e2207 solid 5pt;
+}
+#wall {
+  /* make this image an absoulte background */
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 90vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin: 0;
+  border: none;
+  opacity: 0.3;
+}
+
+.tube {
+  background: url("assets/images/tube.png");
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 850px;
+  background-repeat: no-repeat;
+  animation: tubemove 90s infinite;
+  opacity: 0.3;
+  scale: 0.5;
+}
+
+@keyframes tubemove {
+  0% {
+    transform: translateX(10vw);
+  }
+  50% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(10vw);
+  }
+}
+
+#img-homelife img {
+  width: 40%;
+}
