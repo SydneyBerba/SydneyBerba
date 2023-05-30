@@ -45,7 +45,7 @@ scrollLinks.forEach(function(link) {
     var offsetPosition = targetElement.offsetTop - navbarHeight;
     
     // Calculate the center position of the viewport
-    var viewportCenter = window.innerHeight / 2.4;
+    var viewportCenter = window.innerHeight / 4;
     
     // Calculate the target position to center the div
     var targetPosition = offsetPosition - viewportCenter + targetElement.offsetHeight / 2;

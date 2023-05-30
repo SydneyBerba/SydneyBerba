@@ -105,6 +105,7 @@ h1 {
 }
 
 #main p {
+  text-align: center;
   color: rgb(34, 32, 32);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
@@ -212,10 +213,10 @@ nav ul li a:hover {
 .start-container {
   /* center a div */
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   flex-direction: column;
-  margin-top: 10vh;
+  margin-top: 3vh;
   margin-bottom: 20vh;
 }
 
@@ -229,11 +230,20 @@ nav ul li a:hover {
   text-align: center;
   border: #000000 solid 5pt;
   font-family: Retro;
+  text-decoration: none;
 }
 
+.start:hover {
+  color: rgb(235, 235, 9);
+  transition: 0.2s;
+}
+
+#personality {
+  text-align: left;
+}
 /* .column {
-  margin-left: 15vw;
-} */
+    margin-left: 15vw;
+  } */
 
 .row {
   display: flex;
@@ -252,6 +262,10 @@ nav ul li a:hover {
   color: white;
   font-size: 3rem;
   /* add border */
+}
+
+.sticky {
+  position: relative;
 }
 
 .images {
@@ -281,9 +295,9 @@ nav ul li a:hover {
   transform: scale(0.9);
 }
 /* 
-.image {
-  display: flex;
-} */
+  .image {
+    display: flex;
+  } */
 
 .row p {
   color: rgb(34, 32, 32);
@@ -309,6 +323,23 @@ nav ul li a:hover {
   margin: 0;
   border: none;
   opacity: 0.3;
+}
+
+#underground {
+  /* make this image an absoulte background */
+
+  background-repeat: repeat;
+  background-size: cover;
+  height: 183vh;
+  width: 100vw;
+  position: absolute;
+  top: 400vh;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin: 0;
+  border: none;
+  opacity: 0.2;
 }
 
 .tube {
