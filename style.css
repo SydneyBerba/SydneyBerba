@@ -39,21 +39,22 @@ body {
 
 .cloud1 {
   background: url("assets/images/cloud1.png");
+  background-size: cover;
   z-index: -1;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 200px;
   position: absolute;
   top: 450px;
   background-repeat: no-repeat;
-  animation: move1 90s infinite;
+  animation: move1 40s infinite;
   opacity: 0.4;
   scale: 0.5;
 }
 
 .cloud2 {
   background: url("assets/images/cloud4.png");
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 200px;
   position: absolute;
   top: 300px;
   background-repeat: no-repeat;
@@ -64,8 +65,8 @@ body {
 
 .cloud3 {
   background: url("assets/images/cloud3.png");
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 200px;
   position: absolute;
   top: 50px;
   background-repeat: no-repeat;
@@ -98,6 +99,7 @@ h1 {
 }
 
 #main {
+  width: 89vw;
   display: flex;
   /* vertical center items */
   align-items: center;
@@ -251,8 +253,7 @@ nav ul li a:hover {
   justify-content: center;
   /* vertically align items */
   align-items: center;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
+  margin-bottom: 10vh;
   margin-left: 5vw;
   margin-right: 5vw;
 }
@@ -278,6 +279,7 @@ nav ul li a:hover {
   transition: transform 0.3s ease;
   border: #5e2207 solid 5pt;
   width: 33%;
+  margin: 15px 15px;
 }
 
 .images img:hover {
@@ -348,7 +350,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 850px;
+  top: 100vh;
   background-repeat: no-repeat;
   animation: tubemove 90s infinite;
   opacity: 0.3;

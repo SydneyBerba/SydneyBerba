@@ -4,7 +4,7 @@ function showNav(){
     var scrollVal = window.scrollY;
     console.log(scrollVal);
 
-    if(scrollVal >= 800){
+    if(scrollVal >= 780){
         navbar.classList.add('show');
     }
     else{
@@ -42,17 +42,11 @@ scrollLinks.forEach(function(link) {
     var targetElement = document.getElementById(targetId);
 
     // Calculate the scroll position, accounting for the sticky navbar height
-    var offsetPosition = targetElement.offsetTop - navbarHeight;
     
-    // Calculate the center position of the viewport
-    var viewportCenter = window.innerHeight / 4;
-    
-    // Calculate the target position to center the div
-    var targetPosition = offsetPosition - viewportCenter + targetElement.offsetHeight / 2;
-    
+    var targetOffsetTop = targetElement.offsetTop;
     // Scroll smoothly to the target position
     window.scrollTo({
-      top: targetPosition,
+      top: targetOffsetTop-navbarHeight,
       behavior: 'smooth'
     });
   });
