@@ -120,6 +120,26 @@ h1 {
   border: #5c2319 solid 5pt;
 }
 
+#volume-controller {
+  position: fixed;
+  z-index: 10;
+  top: 3px;
+  width: 64px;
+  height: 64px;
+  scale: 0.7;
+}
+
+#volume-controller:hover {
+  cursor: pointer;
+}
+
+.volume {
+  background-image: url("assets/images/volume.png");
+}
+.novolume {
+  background-image: url("assets/images/novolume.png");
+}
+
 nav {
   display: flex;
   justify-content: center;

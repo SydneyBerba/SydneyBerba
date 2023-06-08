@@ -14,18 +14,38 @@ function showNav(){
 
 window.addEventListener('scroll', showNav);
 
+
+
 //coin sound
 var coinSound = new Audio('assets/audio/coin.mp3');
-// declare all a tags
 var soundLinks = document.querySelectorAll('.sound-source');
 // Attach a click event listener to each <a> tag
 soundLinks.forEach(function(link) {
     link.addEventListener('click', function(event) {
+      var volume = document.getElementById('volume-controller').classList == 'volume'? 1 : 0;
+      coinSound.volume = volume
       coinSound.currentTime = 0; // Rewind the sound effect
       coinSound.play(); // Play the sound effect
       // You can add additional actions or code here if needed
     });
   });
+
+  window.onload = function() {
+    var audioElement = document.getElementById('themesong');
+    var volumeController = document.getElementById('volume-controller');
+    var isMuted = false;
+
+    volumeController.addEventListener('click', function() {
+      isMuted = !isMuted;
+
+      audioElement.volume = isMuted? 0 : 0.3;
+      audioElement.play();
+    })
+
+      // Play audio automatically when the page loads
+      audioElement.volume = isMuted? 0 : 0.3;
+      audioElement.play();
+  };
 
 
   // Get the height of the sticky navbar
@@ -146,5 +166,20 @@ function updateStickyDiv1() {
     }
   }
   
-  window.addEventListener('scroll', updateStickyDiv1);
+window.addEventListener('scroll', updateStickyDiv1);
   
+
+function setVolumeState(){
+  volumeDiv = document.getElementById('volume-controller');
+  currentState = volumeDiv.classList;
+  if (currentState == 'volume'){
+    volumeDiv.classList.remove('volume');
+    volumeDiv.classList.add('novolume');
+  }
+  else{
+    volumeDiv.classList.remove('novolume');
+    volumeDiv.classList.add('volume');
+  }
+}
+
+document.getElementById('volume-controller').addEventListener('click', setVolumeState);
